@@ -1,7 +1,7 @@
 Summary:	Networked grep
 Summary(pl):	Sieciowy grep
 Name:		ngrep
-Version:	1.40
+Version:	1.40.1
 Release:	1
 License:	Freeware
 Group:		Applications/Networking
