@@ -1,12 +1,13 @@
 Summary:	Networked grep
 Summary(pl):	Sieciowy grep
 Name:		ngrep
-Version:	1.40.1
+Version:	1.41
 Release:	1
 License:	Freeware
 Group:		Applications/Networking
-Source0:	http://dl.sourceforge.net/ngrep/%{name}-%{version}.tar.gz
-# Source0-md5:	6bda40605febf490623a625202f2a605
+#Source0:	http://dl.sourceforge.net/ngrep/%{name}-%{version}.tar.bz2
+Source0:	http://belnet.dl.sourceforge.net/sourceforge/ngrep/ngrep-1.41.tar.bz2
+# Source0-md5:	b9bf857c67169362c98074aaf9c59a87
 URL:		http://ngrep.sourceforge.net/
 BuildRequires:	autoconf
 BuildRequires:	automake
@@ -31,7 +32,7 @@ interfejsy ethernet, ppp i slip. Ngrep zna zasady filtrowania bpf w
 takim samym stylu jak czê¶ciej u¿ywane pakiety typu tpcdump czy snoop.
 
 %prep
-%setup -q -n %{name}
+%setup -q
 
 %build
 %{__aclocal}
@@ -51,6 +52,6 @@ rm -rf $RPM_BUILD_ROOT
 
 %files
 %defattr(644,root,root,755)
-%doc BUGS CHANGES README COPYRIGHT
+%doc BUGS CHANGES README LICENSE USAGE
 %attr(755,root,root) %{_sbindir}/*
 %{_mandir}/man?/*
