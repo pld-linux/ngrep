@@ -2,7 +2,7 @@ Summary:	A program that mimicks as much functionality in GNU grep as possible, a
 Summary(pl):	Program spe³niaj±cy zadania GNU grep na poziomie sieci
 Name:		ngrep
 Version:	1.38
-Release:	1
+Release:	2
 License:	Freeware
 Group:		Applications/Networking
 Group(de):	Applikationen/Netzwerkwesen
