@@ -33,7 +33,7 @@ takim samym stylu jak czê¶ciej u¿ywane pakiety typu tpcdump czy snoop.
 
 %build
 aclocal
-autoconf
+%{__autoconf}
 %configure
 %{__make}
 
