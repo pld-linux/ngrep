@@ -5,8 +5,6 @@ Version:	1.40.1
 Release:	1
 License:	Freeware
 Group:		Applications/Networking
-Group(de):	Applikationen/Netzwerkwesen
-Group(pl):	Aplikacje/Sieciowe
 Source0:	http://prdownloads.sf.net/ngrep/%{name}-%{version}.tar.gz
 URL:		http://ngrep.sourceforge.net/
 BuildRequires:	autoconf
