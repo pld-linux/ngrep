@@ -1,12 +1,12 @@
 Summary:	Networked grep
 Summary(pl):	Sieciowy grep
 Name:		ngrep
-Version:	1.41
-Release:	2
+Version:	1.42
+Release:	1
 License:	Freeware
 Group:		Applications/Networking
 Source0:	http://dl.sourceforge.net/ngrep/%{name}-%{version}.tar.bz2
-# Source0-md5:	b9bf857c67169362c98074aaf9c59a87
+# Source0-md5:	35e821cfd888e9523a90fb7e5074a072
 Patch0:		%{name}-pcap-bpf.patch
 URL:		http://ngrep.sourceforge.net/
 BuildRequires:	autoconf
@@ -53,6 +53,6 @@ rm -rf $RPM_BUILD_ROOT
 
 %files
 %defattr(644,root,root,755)
-%doc BUGS CHANGES README LICENSE USAGE
+%doc BUGS CHANGES README LICENSE
 %attr(755,root,root) %{_sbindir}/*
 %{_mandir}/man?/*
