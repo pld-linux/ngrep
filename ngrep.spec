@@ -1,14 +1,15 @@
-Summary:	A program that mimicks as much functionality in GNU grep as possible, applied at the network layer
-Summary(pl):	Program spe³niaj±cy zadania GNU grep na poziomie sieci
+Summary:	Networked grep
+Summary(pl):	Sieciowy grep
 Name:		ngrep
-Version:	1.38
-Release:	2
+Version:	1.41
+Release:	1
 License:	Freeware
 Group:		Applications/Networking
-Group(de):	Applikationen/Netzwerkwesen
-Group(pl):	Aplikacje/Sieciowe
-Source0:	http://www.packetfactory.net/Projects/ngrep/%{name}-%{version}.tar.gz
-URL:		http://www.packetfactory.net/Projects/ngrep/
+Source0:	http://dl.sourceforge.net/ngrep/%{name}-%{version}.tar.bz2
+# Source0-md5:	b9bf857c67169362c98074aaf9c59a87
+URL:		http://ngrep.sourceforge.net/
+BuildRequires:	autoconf
+BuildRequires:	automake
 BuildRequires:	libpcap-devel
 BuildRoot:	%{tmpdir}/%{name}-%{version}-root-%(id -u -n)
 
@@ -30,9 +31,11 @@ interfejsy ethernet, ppp i slip. Ngrep zna zasady filtrowania bpf w
 takim samym stylu jak czê¶ciej u¿ywane pakiety typu tpcdump czy snoop.
 
 %prep
-%setup -q -n %{name}
+%setup -q
 
 %build
+%{__aclocal}
+%{__autoconf}
 %configure
 %{__make}
 
@@ -43,13 +46,11 @@ install -d $RPM_BUILD_ROOT{%{_sbindir},%{_mandir}/man8}
 install ngrep $RPM_BUILD_ROOT%{_sbindir}
 install ngrep.8 $RPM_BUILD_ROOT%{_mandir}/man8
 
-gzip -9nf BUGS CHANGES README COPYRIGHT
-
 %clean
 rm -rf $RPM_BUILD_ROOT
 
 %files
 %defattr(644,root,root,755)
-%doc *.gz
+%doc BUGS CHANGES README LICENSE USAGE
 %attr(755,root,root) %{_sbindir}/*
-%{_mandir}/man8/*
+%{_mandir}/man?/*
