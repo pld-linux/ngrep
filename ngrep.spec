@@ -10,6 +10,7 @@ Group(pl):	Aplikacje/Sieciowe
 Source0:	http://www.packetfactory.net/Projects/ngrep/%{name}-%{version}.tar.gz
 Patch0:		%{name}-time_h.patch
 URL:		http://www.packetfactory.net/Projects/ngrep/
+BuildRequires:	autoconf
 BuildRequires:	libpcap-devel
 BuildRoot:	%{tmpdir}/%{name}-%{version}-root-%(id -u -n)
 
