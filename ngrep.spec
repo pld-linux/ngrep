@@ -8,6 +8,7 @@ Group:		Applications/Networking
 Source0:	http://prdownloads.sf.net/ngrep/%{name}-%{version}.tar.gz
 URL:		http://ngrep.sourceforge.net/
 BuildRequires:	autoconf
+BuildRequires:	automake
 BuildRequires:	libpcap-devel
 BuildRoot:	%{tmpdir}/%{name}-%{version}-root-%(id -u -n)
 
@@ -32,12 +33,10 @@ takim samym stylu jak czê¶ciej u¿ywane pakiety typu tpcdump czy snoop.
 %setup -q -n %{name}
 
 %build
-aclocal
+%{__aclocal}
 %{__autoconf}
 %configure
 %{__make}
-
-gzip -9nf BUGS CHANGES README COPYRIGHT
 
 %install
 rm -rf $RPM_BUILD_ROOT
@@ -51,6 +50,6 @@ rm -rf $RPM_BUILD_ROOT
 
 %files
 %defattr(644,root,root,755)
-%doc *.gz
+%doc BUGS CHANGES README COPYRIGHT
 %attr(755,root,root) %{_sbindir}/*
 %{_mandir}/man?/*
