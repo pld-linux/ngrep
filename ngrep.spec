@@ -38,10 +38,10 @@ takim samym stylu jak czê¶ciej u¿ywane pakiety typu tpcdump czy snoop.
 
 %install
 rm -rf $RPM_BUILD_ROOT
-%{__install} -d $RPM_BUILD_ROOT{%{_sbindir},%{_mandir}/man8}
+install -d $RPM_BUILD_ROOT{%{_sbindir},%{_mandir}/man8}
 
-%{__install} ngrep $RPM_BUILD_ROOT%{_sbindir}
-%{__install} ngrep.8 $RPM_BUILD_ROOT%{_mandir}/man8
+install ngrep $RPM_BUILD_ROOT%{_sbindir}
+install ngrep.8 $RPM_BUILD_ROOT%{_mandir}/man8
 
 gzip -9nf BUGS CHANGES README COPYRIGHT
 
