@@ -8,6 +8,7 @@ Group:		Applications/Networking
 Group(de):	Applikationen/Netzwerkwesen
 Group(pl):	Aplikacje/Sieciowe
 Source0:	http://www.packetfactory.net/Projects/ngrep/%{name}-%{version}.tar.gz
+Patch0:		%{name}-time.patch
 URL:		http://www.packetfactory.net/Projects/ngrep/
 BuildRequires:	libpcap-devel
 BuildRoot:	%{tmpdir}/%{name}-%{version}-root-%(id -u -n)
@@ -31,6 +32,7 @@ takim samym stylu jak czê¶ciej u¿ywane pakiety typu tpcdump czy snoop.
 
 %prep
 %setup -q -n %{name}
+%patch0 -p1
 
 %build
 %configure
