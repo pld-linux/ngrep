@@ -5,8 +5,7 @@ Version:	1.41
 Release:	1
 License:	Freeware
 Group:		Applications/Networking
-#Source0:	http://dl.sourceforge.net/ngrep/%{name}-%{version}.tar.bz2
-Source0:	http://belnet.dl.sourceforge.net/sourceforge/ngrep/ngrep-1.41.tar.bz2
+Source0:	http://dl.sourceforge.net/ngrep/%{name}-%{version}.tar.bz2
 # Source0-md5:	b9bf857c67169362c98074aaf9c59a87
 URL:		http://ngrep.sourceforge.net/
 BuildRequires:	autoconf
