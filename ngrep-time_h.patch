@@ -1,0 +1,11 @@
+diff -urN ngrep/ngrep.c ngrep.patch/ngrep.c
+--- ngrep/ngrep.c	Mon Jun 26 21:52:50 2000
++++ ngrep.patch/ngrep.c	Sat Aug 18 22:35:59 2001
+@@ -44,6 +44,7 @@
+ #include <stdlib.h>
+ #include <string.h>
+ #include <signal.h>
++#include <time.h>
+ 
+ #include "regex.h"
+ #include "ngrep.h"
