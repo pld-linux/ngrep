@@ -1,15 +1,14 @@
-Summary:	A program that mimicks as much functionality in GNU grep as possible, applied at the network layer
-Summary(pl):	Program spe³niaj±cy zadania GNU grep na poziomie sieci
+Summary:	Networked grep
+Summary(pl):	Sieciowy grep
 Name:		ngrep
-Version:	1.38
-Release:	2
+Version:	1.40
+Release:	1
 License:	Freeware
 Group:		Applications/Networking
 Group(de):	Applikationen/Netzwerkwesen
 Group(pl):	Aplikacje/Sieciowe
-Source0:	http://www.packetfactory.net/Projects/ngrep/%{name}-%{version}.tar.gz
-Patch0:		%{name}-time_h.patch
-URL:		http://www.packetfactory.net/Projects/ngrep/
+Source0:	http://prdownloads.sf.net/ngrep/%{name}-%{version}.tar.gz
+URL:		http://ngrep.sourceforge.net/
 BuildRequires:	autoconf
 BuildRequires:	libpcap-devel
 BuildRoot:	%{tmpdir}/%{name}-%{version}-root-%(id -u -n)
@@ -33,9 +32,9 @@ takim samym stylu jak czê¶ciej u¿ywane pakiety typu tpcdump czy snoop.
 
 %prep
 %setup -q -n %{name}
-%patch0 -p1
 
 %build
+aclocal
 autoconf
 %configure
 %{__make}
@@ -56,4 +55,4 @@ rm -rf $RPM_BUILD_ROOT
 %defattr(644,root,root,755)
 %doc *.gz
 %attr(755,root,root) %{_sbindir}/*
-%{_mandir}/man8/*
+%{_mandir}/man?/*
