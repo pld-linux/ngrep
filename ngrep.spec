@@ -37,14 +37,14 @@ autoconf
 %configure
 %{__make}
 
+gzip -9nf BUGS CHANGES README COPYRIGHT
+
 %install
 rm -rf $RPM_BUILD_ROOT
 install -d $RPM_BUILD_ROOT{%{_sbindir},%{_mandir}/man8}
 
 install ngrep $RPM_BUILD_ROOT%{_sbindir}
 install ngrep.8 $RPM_BUILD_ROOT%{_mandir}/man8
-
-gzip -9nf BUGS CHANGES README COPYRIGHT
 
 %clean
 rm -rf $RPM_BUILD_ROOT
