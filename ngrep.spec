@@ -1,15 +1,15 @@
+Summary:	A program that mimicks as much functionality in GNU grep as possible, applied at the network layer
+Summary(pl):	Program spe³niaj±cy zadania GNU grep na poziomie sieci
 Name:		ngrep
 Version:	1.38
-BuildRequires:	libpcap-devel
-Summary:	A program that mimicks as much functionality in GNU grep as possible, applied at the network layer.
-Summary(pl):	Program spe³niaj±cy zadania GNU grep na poziomie sieci.
 Release:	1
 License:	GPL
 Group:		Applications/Networking
 Group(de):	Applikationen/Netzwerkwesen
 Group(pl):	Aplikacje/Sieciowe
 Source0:	http://www.packetfactory.net/Projects/ngrep/%{name}-%{version}.tar.gz
-URL:		http://www.packetfactory.net/Projects/ngrep
+URL:		http://www.packetfactory.net/Projects/ngrep/
+BuildRequires:	libpcap-devel
 BuildRoot:	%{tmpdir}/%{name}-%{version}-root-%(id -u -n)
 
 %description
@@ -38,9 +38,9 @@ takim samym stylu jak czê¶ciej u¿ywane pakiety typu tpcdump czy snoop.
 
 %install
 rm -rf $RPM_BUILD_ROOT
-%{__install} -d $RPM_BUILD_ROOT%{_sbindir}
+%{__install} -d $RPM_BUILD_ROOT{%{_sbindir},%{_mandir}/man8}
+
 %{__install} ngrep $RPM_BUILD_ROOT%{_sbindir}
-%{__install} -d $RPM_BUILD_ROOT%{_mandir}/man8
 %{__install} ngrep.8 $RPM_BUILD_ROOT%{_mandir}/man8
 
 gzip -9nf BUGS CHANGES README
@@ -50,6 +50,6 @@ rm -rf $RPM_BUILD_ROOT
 
 %files
 %defattr(644,root,root,755)
+%doc *.gz
 %attr(755,root,root) %{_sbindir}/*
 %{_mandir}/man8/*
-%doc *.gz
