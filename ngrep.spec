@@ -6,6 +6,7 @@ Release:	1
 License:	Freeware
 Group:		Applications/Networking
 Source0:	http://dl.sourceforge.net/ngrep/%{name}-%{version}.tar.gz
+# Source0-md5:	6bda40605febf490623a625202f2a605
 URL:		http://ngrep.sourceforge.net/
 BuildRequires:	autoconf
 BuildRequires:	automake
