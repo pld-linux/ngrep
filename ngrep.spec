@@ -38,7 +38,8 @@ takim samym stylu jak czê¶ciej u¿ywane pakiety typu tpcdump czy snoop.
 cp -f %{_datadir}/libtool/config.sub .
 %{__aclocal}
 %{__autoconf}
-%configure --enable-ipv6
+%configure \
+	--enable-ipv6
 %{__make}
 
 %install
