@@ -2,7 +2,7 @@ Summary:	Networked grep
 Summary(pl):	Sieciowy grep
 Name:		ngrep
 Version:	1.44
-Release:	1
+Release:	2
 License:	Freeware
 Group:		Applications/Networking
 Source0:	http://dl.sourceforge.net/ngrep/%{name}-%{version}.tar.bz2
@@ -38,7 +38,7 @@ takim samym stylu jak czê¶ciej u¿ywane pakiety typu tpcdump czy snoop.
 cp -f %{_datadir}/libtool/config.sub .
 %{__aclocal}
 %{__autoconf}
-%configure
+%configure --enable-ipv6
 %{__make}
 
 %install
