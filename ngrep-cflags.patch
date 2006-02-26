@@ -1,0 +1,12 @@
+diff -Nur ngrep-1.44/regex-0.12/Makefile.in ngrep-1.44.cflags/regex-0.12/Makefile.in
+--- ngrep-1.44/regex-0.12/Makefile.in	2004-09-25 17:04:26.000000000 +0000
++++ ngrep-1.44.cflags/regex-0.12/Makefile.in	2006-02-26 23:33:59.000000000 +0000
+@@ -29,7 +29,7 @@
+ CPPFLAGS = 
+ 
+ # Likewise, you can override CFLAGS to optimize, use -Wall, etc.
+-CFLAGS = -g
++CFLAGS = @CFLAGS@
+ 
+ # Ditto for LDFLAGS and LOADLIBES.
+ LDFLAGS =

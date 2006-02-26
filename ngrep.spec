@@ -7,6 +7,7 @@ License:	Freeware
 Group:		Applications/Networking
 Source0:	http://dl.sourceforge.net/ngrep/%{name}-%{version}.tar.bz2
 # Source0-md5:	8a142d74043609b09ed57d3baadb2fd6
+Patch0:		%{name}-cflags.patch
 URL:		http://ngrep.sourceforge.net/
 BuildRequires:	autoconf
 BuildRequires:	automake
@@ -33,6 +34,7 @@ takim samym stylu jak czê¶ciej u¿ywane pakiety typu tpcdump czy snoop.
 
 %prep
 %setup -q
+%patch0 -p1
 
 %build
 cp -f %{_datadir}/libtool/config.sub .
