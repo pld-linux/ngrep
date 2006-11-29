@@ -1,12 +1,12 @@
 Summary:	Networked grep
 Summary(pl):	Sieciowy grep
 Name:		ngrep
-Version:	1.44
-Release:	2
-License:	Freeware
+Version:	1.45
+Release:	1
+License:	BSD
 Group:		Applications/Networking
 Source0:	http://dl.sourceforge.net/ngrep/%{name}-%{version}.tar.bz2
-# Source0-md5:	8a142d74043609b09ed57d3baadb2fd6
+# Source0-md5:	bc8150331601f3b869549c94866b4f1c
 Patch0:		%{name}-cflags.patch
 URL:		http://ngrep.sourceforge.net/
 BuildRequires:	autoconf
