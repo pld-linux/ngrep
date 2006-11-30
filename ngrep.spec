@@ -42,7 +42,9 @@ cp -f %{_datadir}/libtool/config.sub .
 %{__autoconf}
 %configure \
 	--enable-ipv6
-%{__make}
+%{__make} \
+	MAKEFLAGS= \
+	STRIPFLAG=
 
 %install
 rm -rf $RPM_BUILD_ROOT
