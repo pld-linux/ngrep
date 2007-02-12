@@ -1,5 +1,5 @@
 Summary:	Networked grep
-Summary(pl):	Sieciowy grep
+Summary(pl.UTF-8):   Sieciowy grep
 Name:		ngrep
 Version:	1.45
 Release:	1
@@ -24,13 +24,13 @@ ethernet, ppp and slip interfaces, and understands bpf filter logic in
 the same fashion as more common packet sniffing tools, like tcpdump
 and snoop.
 
-%description -l pl
-Ngrep próbuje wype³niæ zadania stawiane grep-owi, w odniesieniu do
+%description -l pl.UTF-8
+Ngrep prÃ³buje wypeÅ‚niÄ‡ zadania stawiane grep-owi, w odniesieniu do
 poziomu sieci. Ngrep korzysta z biblioteki pcap, pozwala na
-korzystanie z wyra¿eñ regularnych zastosowanych do pakietów czy
-kawa³ków danych. Obecnie obrabia pakiety TCP i UDP przychodz±ce na
+korzystanie z wyraÅ¼eÅ„ regularnych zastosowanych do pakietÃ³w czy
+kawaÅ‚kÃ³w danych. Obecnie obrabia pakiety TCP i UDP przychodzÄ…ce na
 interfejsy ethernet, ppp i slip. Ngrep zna zasady filtrowania bpf w
-takim samym stylu jak czê¶ciej u¿ywane pakiety typu tpcdump czy snoop.
+takim samym stylu jak czÄ™Å›ciej uÅ¼ywane pakiety typu tpcdump czy snoop.
 
 %prep
 %setup -q
