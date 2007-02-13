@@ -1,5 +1,5 @@
 Summary:	Networked grep
-Summary(pl.UTF-8):   Sieciowy grep
+Summary(pl.UTF-8):	Sieciowy grep
 Name:		ngrep
 Version:	1.45
 Release:	1
