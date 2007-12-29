@@ -2,7 +2,7 @@ Summary:	Networked grep
 Summary(pl.UTF-8):	Sieciowy grep
 Name:		ngrep
 Version:	1.45
-Release:	1
+Release:	2
 License:	BSD
 Group:		Applications/Networking
 Source0:	http://dl.sourceforge.net/ngrep/%{name}-%{version}.tar.bz2
