@@ -37,7 +37,6 @@ takim samym stylu jak częściej używane pakiety typu tpcdump czy snoop.
 %patch0 -p1
 
 %build
-cp -f %{_datadir}/libtool/config.sub .
 %{__aclocal}
 %{__autoconf}
 %configure \
