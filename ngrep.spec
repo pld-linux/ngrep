@@ -2,16 +2,17 @@ Summary:	Networked grep
 Summary(pl.UTF-8):	Sieciowy grep
 Name:		ngrep
 Version:	1.45
-Release:	2
+Release:	3
 License:	BSD
 Group:		Applications/Networking
 Source0:	http://dl.sourceforge.net/ngrep/%{name}-%{version}.tar.bz2
 # Source0-md5:	bc8150331601f3b869549c94866b4f1c
 Patch0:		%{name}-cflags.patch
+Patch1:		%{name}-pcap.patch
 URL:		http://ngrep.sourceforge.net/
 BuildRequires:	autoconf
 BuildRequires:	automake
-BuildRequires:	libpcap-devel >= 2:0.8.1
+BuildRequires:	libpcap-devel >= 2:1.0.0
 BuildRequires:	libtool
 BuildRoot:	%{tmpdir}/%{name}-%{version}-root-%(id -u -n)
 
@@ -35,6 +36,7 @@ takim samym stylu jak częściej używane pakiety typu tpcdump czy snoop.
 %prep
 %setup -q
 %patch0 -p1
+%patch1 -p1
 
 %build
 %{__aclocal}
