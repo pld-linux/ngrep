@@ -1,0 +1,25 @@
+--- 1/configure.in.org	2009-01-03 21:58:37.659815983 +0000
++++ 2/configure.in	2009-01-03 21:59:25.723141313 +0000
+@@ -277,21 +277,7 @@
+ [PCAP_DIR=$withval],
+ [PCAP_DIR=$possible_dirs])
+ 
+-pcap_dir=""
+-for dir in $PCAP_DIR ; do 
+-    if test -d $dir -a -r "$dir/pcap.h" ; then 
+-       if test -n "$pcap_dir" -a "$pcap_dir" != "$dir"; then
+-          echo 
+-          echo; echo more than one set found in:
+-          echo  $pcap_dir 
+-          echo  $dir
+-          echo; echo please wipe out all unused pcap installations
+-          exit
+-       else 
+-          pcap_dir="$dir"
+-       fi
+-    fi
+-done
++pcap_dir="/usr/include/pcap"
+ 
+ if test -z "$pcap_dir" ; then
+    echo no; echo !!! couldn\'t find a complete set of pcap headers
