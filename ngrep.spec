@@ -2,7 +2,7 @@ Summary:	Networked grep
 Summary(pl.UTF-8):	Sieciowy grep
 Name:		ngrep
 Version:	1.45
-Release:	6
+Release:	7
 License:	BSD
 Group:		Applications/Networking
 Source0:	http://dl.sourceforge.net/ngrep/%{name}-%{version}.tar.bz2
@@ -42,6 +42,7 @@ takim samym stylu jak częściej używane pakiety typu tpcdump czy snoop.
 %{__aclocal}
 %{__autoconf}
 %configure \
+	CFLAGS="%{rpmcflags} -std=gnu89" \
 	--enable-ipv6 \
 	--disable-pcap-restart
 %{__make} \
